@@ -2,7 +2,7 @@
  * grunt-contrib-jshint
  * http://gruntjs.com/
  *
- * Copyright (c) 2013 "Cowboy" Ben Alman, contributors
+ * Copyright (c) 2015 "Cowboy" Ben Alman, contributors
  * Licensed under the MIT license.
  */
 
@@ -153,8 +153,9 @@ exports.init = function(grunt) {
     }
 
     // Get reporter output directory for relative paths in reporters
+    var reporterOutputDir;
     if (options.hasOwnProperty('reporterOutput')) {
-      var reporterOutputDir = path.dirname(options.reporterOutput);
+      reporterOutputDir = path.dirname(options.reporterOutput);
       delete options.reporterOutput;
     }
 
